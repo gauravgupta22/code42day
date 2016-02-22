@@ -6,9 +6,15 @@
 var express = require('express')
   , routes = require('./routes');
 
+var mongoose = require('mongoose');
 var app = module.exports = express.createServer();
 
 // Configuration
+var db = mongoose.connect('mongodb://localhost/SecureTMdb', function(err) {
+  if (err) {
+    console.error('Could not connect to MongoDB!');
+  }
+});
 
 app.configure(function(){
   app.set('views', __dirname + '/views');
@@ -30,8 +36,10 @@ app.configure('production', function(){
 // Routes
 
 app.get('/', routes.index);
+app.get('/test', routes.test);
 app.post('/secureTM/sendOTP', routes.sendOTP);
 app.post('/secureTM/verifyOTP',routes.verifyOTP);
+app.post('/secureTM/resendOTP',routes.resendOTP);
 
 app.listen(3000, function(){
   console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
