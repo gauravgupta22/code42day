@@ -91,7 +91,7 @@ function requestOTP(){
 
 	mobileNo=inp.value;
 	var http = new XMLHttpRequest();
-	var url = "http://localhost/SecureTM/sendOTP";
+	var url = "/SecureTM/sendOTP";
 	var params = "mobileNo="+mobileNo;
 	http.open("POST", url, true);
 
@@ -140,7 +140,7 @@ function resendOTP(){
 	
 	mobileNo=inp.value;
 	var http = new XMLHttpRequest();
-	var url = "http://localhost/SecureTM/resendOTP";
+	var url = "/SecureTM/resendOTP";
 	var params = "mobileNo="+mobileNo;
 	http.open("POST", url, true);
 
@@ -191,7 +191,7 @@ function verifyOTP(){
 
 	var otp=inp1.value;
 	var http = new XMLHttpRequest();
-	var url = "http://localhost/SecureTM/verifyOTP";
+	var url = "/SecureTM/verifyOTP";
 	var params = "mobileNo="+mobileNo+"&otp="+otp;
 	http.open("POST", url, true);
 
