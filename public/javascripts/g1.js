@@ -21,7 +21,7 @@ resendbutton.className="btn btn-success resendbutton";
 resendtext.className="resendtext";
 resendtext.innerHTML="an OTP has already been sent to this mobile no.";
 
-logo.innerHTML='powered by <a href="#" style="color:#3BB9FF;">SecureTM</a>';
+logo.innerHTML='powered by <a href="http://52.36.24.247/#" style="color:#3BB9FF;">SecureTM</a>';
 
 win.appendChild(logo);
 win.appendChild(sta1);
@@ -55,7 +55,7 @@ function initCSS(){
     var link  = document.createElement('link');
     link.rel  = 'stylesheet';
     link.type = 'text/css';
-    link.href = '/stylesheets/securetm.css';
+    link.href = 'http://52.36.24.247/stylesheets/securetm.css';
     link.media = 'all';
     head.appendChild(link);
 
@@ -91,7 +91,7 @@ function requestOTP(){
 
 	mobileNo=inp.value;
 	var http = new XMLHttpRequest();
-	var url = "/SecureTM/sendOTP";
+	var url = "http://52.36.24.247/SecureTM/sendOTP";
 	var params = "mobileNo="+mobileNo;
 	http.open("POST", url, true);
 
@@ -140,7 +140,7 @@ function resendOTP(){
 	
 	mobileNo=inp.value;
 	var http = new XMLHttpRequest();
-	var url = "/SecureTM/resendOTP";
+	var url = "http://52.36.24.247/SecureTM/resendOTP";
 	var params = "mobileNo="+mobileNo;
 	http.open("POST", url, true);
 
@@ -191,7 +191,7 @@ function verifyOTP(){
 
 	var otp=inp1.value;
 	var http = new XMLHttpRequest();
-	var url = "/SecureTM/verifyOTP";
+	var url = "http://52.36.24.247/SecureTM/verifyOTP";
 	var params = "mobileNo="+mobileNo+"&otp="+otp;
 	http.open("POST", url, true);
 
