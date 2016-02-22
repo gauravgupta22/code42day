@@ -55,7 +55,7 @@ function initCSS(){
     var link  = document.createElement('link');
     link.rel  = 'stylesheet';
     link.type = 'text/css';
-    link.href = 'http://localhost/stylesheets/securetm.css';
+    link.href = '/stylesheets/securetm.css';
     link.media = 'all';
     head.appendChild(link);
 
