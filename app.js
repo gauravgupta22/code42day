@@ -41,6 +41,6 @@ app.post('/secureTM/sendOTP', routes.sendOTP);
 app.post('/secureTM/verifyOTP',routes.verifyOTP);
 app.post('/secureTM/resendOTP',routes.resendOTP);
 
-app.listen(3000, function(){
+app.listen(80, function(){
   console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
 });
