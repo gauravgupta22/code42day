@@ -11,8 +11,6 @@ check out this link for quick demo:
 #How to set up:#
 
 ```
-#!html
-
 <div id="SecureTM_window"></div>
 <script type="text/javascript"  src="http://52.36.24.247/javascripts/g1.js"></script>
 ```
