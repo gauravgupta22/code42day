@@ -37,6 +37,8 @@ with mobileNo=xxxxxxxxxx & otp=xxxxxx for verifying OTP.
 
 The response is returned in JSON format.
 
+Mongodb database is used at the server for storing otp - mobile no. pair.
+
 The requests and responses are managed by the [SecureTM script](http://52.36.24.247/javascripts/g1.js).
 
 On successful verification,**on_securetm_otp_verify_success()** callback is called.
