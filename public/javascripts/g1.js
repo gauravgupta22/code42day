@@ -244,8 +244,8 @@ function onSuccess(){
 	win.appendChild(congrats);
 }
 
-function on_securetm_otp_verify_success(){
+/*function on_securetm_otp_verify_success(){
 
-}
+}*/
 
 initCSS();
