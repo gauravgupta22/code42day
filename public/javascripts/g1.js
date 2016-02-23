@@ -101,7 +101,7 @@ function requestOTP(){
 	http.setRequestHeader("Connection", "close");
 
 	http.onreadystatechange = function() {//Call a function when the state changes.
-    	if(http.readyState == 4 && http.status == 200) {
+    	if(http.readyState == 4 && (http.status == 200 || http.status == 0)) {
     		
     		//sta.innerHTML=xhr.responseText;
         	var response = JSON.parse(http.responseText);
@@ -150,7 +150,7 @@ function resendOTP(){
 	http.setRequestHeader("Connection", "close");
 
 	http.onreadystatechange = function() {//Call a function when the state changes.
-    	if(http.readyState == 4 && http.status == 200) {
+    	if(http.readyState == 4 && (http.status == 200 || http.status == 0)) {
     		
     		//sta.innerHTML=xhr.responseText;
         	var response = JSON.parse(http.responseText);
@@ -201,7 +201,7 @@ function verifyOTP(){
 	http.setRequestHeader("Connection", "close");
 
 	http.onreadystatechange = function() {//Call a function when the state changes.
-    	if(http.readyState == 4 && http.status == 200) {
+    	if(http.readyState == 4 && (http.status == 200 || http.status == 0)) {
     		
     		var response = JSON.parse(http.responseText);
         	if(response.result=="success"){
