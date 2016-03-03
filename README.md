@@ -1,3 +1,4 @@
+The server has been closed. We are sorry for inconvinience. Feel free to contact us for more details.
 #SecureTM API server http://52.36.24.247/#
 
 #SecureTM:#
